@@ -47,6 +47,12 @@ public class greenkartshoping extends baseclass
 		d.flighmethod();
 	}
 
+
+	public void testerB()
+	{
+		System.out.println("Test B");
+	}
+
 	@Test
 	public void testerA()
 	{
@@ -58,9 +64,5 @@ public class greenkartshoping extends baseclass
 		System.out.println("dsfgdf");
 		
 	}
-	
-	
-	
-
 	
 }
