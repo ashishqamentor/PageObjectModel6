@@ -27,6 +27,7 @@ public class listen extends baseclass implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestSuccess(result);
 		System.out.println("Test is successfull.");
+		System.out.println();
 	}
 
 	@Override
