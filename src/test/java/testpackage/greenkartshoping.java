@@ -37,7 +37,7 @@ public class greenkartshoping extends baseclass
 		}	
 		Thread.sleep(2000);
 		c.checkoutjourney(mypromo,mycountry);
-		
+
 	}
 	
 	@Test(enabled = false)
@@ -47,9 +47,17 @@ public class greenkartshoping extends baseclass
 		d.flighmethod();
 	}
 
+
 	public void testerB()
 	{
 		System.out.println("Test B");
 	}
+
+	@Test
+	public void testerA()
+	{
+		System.out.println("Test A");
+	}
+	
 	
 }
