@@ -37,7 +37,7 @@ public class greenkartshoping extends baseclass
 		}	
 		Thread.sleep(2000);
 		c.checkoutjourney(mypromo,mycountry);
-		
+
 	}
 	
 	@Test(enabled = false)
@@ -46,6 +46,16 @@ public class greenkartshoping extends baseclass
 		w.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 		d.flighmethod();
 	}
+
+	@Test
+	public void testerA()
+	{
+		System.out.println("Test A");
+	}
+	
+	
+	
+	
 
 	
 }
