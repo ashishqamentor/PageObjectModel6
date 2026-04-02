@@ -59,10 +59,5 @@ public class greenkartshoping extends baseclass
 		System.out.println("Test A");
 	}
 	
-	public void mybranchAtest()
-	{
-		System.out.println("dsfgdf");
-		
-	}
 	
 }
