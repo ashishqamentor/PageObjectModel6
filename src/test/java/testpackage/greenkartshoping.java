@@ -47,5 +47,9 @@ public class greenkartshoping extends baseclass
 		d.flighmethod();
 	}
 
+	public void testerB()
+	{
+		System.out.println("Test B");
+	}
 	
 }
