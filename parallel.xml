@@ -2,23 +2,25 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Suite">
 
-  <test thread-count="5" name="logintest">
-    <classes>
-      <class name="testpackage.logintest"/>
-    </classes>
-  </test> <!-- Test -->
 
-	<parameter name="url"		value="https://rahulshettyacademy.com/seleniumPractise/#/"></parameter>
-	<parameter name="promo" value="ashishQa1236"></parameter>
-	<parameter name="country" value="Brazil"></parameter>
-	
+	<listeners>
+		<listener class-name="testpackage.listen"></listener>
+	</listeners>
+
+	<test thread-count="5" name="logintest">
+		<classes>
+			<class name="testpackage.logintest" />
+		</classes>
+	</test> <!-- Test -->
+
 	<test thread-count="5" name="greenkartshoping">
+		<parameter name="url" value="https://rahulshettyacademy.com/seleniumPractise/#/"></parameter>
+		<parameter name="promo" value="ashishQa1236"></parameter>
+		<parameter name="country" value="Brazil"></parameter>
+
 		<classes>
 			<class name="testpackage.greenkartshoping" />
 		</classes>
 	</test> <!-- Test -->
-
-
-
 
 </suite> <!-- Suite -->

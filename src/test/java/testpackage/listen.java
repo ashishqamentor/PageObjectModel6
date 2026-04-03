@@ -11,15 +11,24 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.google.common.io.Files;
 
 public class listen extends baseclass implements ITestListener {
 
+	ExtentReports extent = extenreportObj();
+	ExtentTest test ;
+	
 	@Override
-	public void onTestStart(ITestResult result) {
+	public void onTestStart(ITestResult result) 
+	{
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestStart(result);
 		System.out.println("Test is started.");
+
+		test = extent.createTest(result.getMethod().getMethodName());
+		test.info("i am creating automation report");
 	}
 
 	@Override
@@ -28,6 +37,24 @@ public class listen extends baseclass implements ITestListener {
 		ITestListener.super.onTestSuccess(result);
 		System.out.println("Test is successfull.");
 		System.out.println();
+		test.pass("Test is Passed.");		
+		try {
+			
+			w=  (WebDriver) result.getTestClass().getRealClass().getField("w").get(result.getInstance());
+			String testname = result.getMethod().getMethodName();
+			File f = myfailedscreenshot(testname);			
+			test.addScreenCaptureFromPath(f.getAbsolutePath());
+				
+			extent.flush();
+			
+		} catch (Exception e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			extent.flush();
+		}		
+		
+		
 	}
 
 	@Override
@@ -36,25 +63,31 @@ public class listen extends baseclass implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		System.out.println("test is failed.");
-
+		test.fail("Test is failed");
 		try {
 			
 			w=  (WebDriver) result.getTestClass().getRealClass().getField("w").get(result.getInstance());
+			String testname = result.getMethod().getMethodName();
+			File f = myfailedscreenshot(testname);			
+			test.addScreenCaptureFromPath(f.getAbsolutePath());
+				
+			extent.flush();
 			
-			LocalDateTime now = LocalDateTime.now();
-	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm_ss");
-	        String formattedDate = now.format(formatter);
-			
-			TakesScreenshot tc = (TakesScreenshot) w;
-			File src = tc.getScreenshotAs(OutputType.FILE);
-			File dest = new File("./screenshot/temp_"+formattedDate+".png");
-			Files.copy(src, dest);
 		} catch (Exception e) 
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			extent.flush();
 		}
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

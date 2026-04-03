@@ -40,29 +40,7 @@ public class greenkartshoping extends baseclass
 
 	}
 	
-	@Test(enabled = false)
-	public void flightbookingtest()
-	{
-		w.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-		d.flighmethod();
-	}
 
-
-	public void testerB()
-	{
-		System.out.println("Test B");
-	}
-
-	@Test
-	public void testerA()
-	{
-		System.out.println("Test A");
-	}
-	
-	public void mybracnhAtest()
-	{
-		System.out.println("asfsadf");
-	}
 	
 	
 }
