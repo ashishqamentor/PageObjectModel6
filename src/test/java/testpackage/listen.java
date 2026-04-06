@@ -20,15 +20,18 @@ public class listen extends baseclass implements ITestListener {
 	ExtentReports extent = extenreportObj();
 	ExtentTest test ;
 	
+	ThreadLocal<ExtentTest> thread = new ThreadLocal<>();
+	
 	@Override
 	public void onTestStart(ITestResult result) 
 	{
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestStart(result);
 		System.out.println("Test is started.");
-
 		test = extent.createTest(result.getMethod().getMethodName());
-		test.info("i am creating automation report");
+		thread.set(test);
+		
+		thread.get().info("i am creating automation report");
 	}
 
 	@Override
@@ -37,13 +40,13 @@ public class listen extends baseclass implements ITestListener {
 		ITestListener.super.onTestSuccess(result);
 		System.out.println("Test is successfull.");
 		System.out.println();
-		test.pass("Test is Passed.");		
+		thread.get().pass("Test is Passed.");		
 		try {
 			
 			w=  (WebDriver) result.getTestClass().getRealClass().getField("w").get(result.getInstance());
 			String testname = result.getMethod().getMethodName();
 			File f = myfailedscreenshot(testname);			
-			test.addScreenCaptureFromPath(f.getAbsolutePath());
+			thread.get().addScreenCaptureFromPath(f.getAbsolutePath());
 				
 			extent.flush();
 			
@@ -63,13 +66,13 @@ public class listen extends baseclass implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		System.out.println("test is failed.");
-		test.fail("Test is failed");
+		thread.get().fail("Test is failed");
 		try {
 			
 			w=  (WebDriver) result.getTestClass().getRealClass().getField("w").get(result.getInstance());
 			String testname = result.getMethod().getMethodName();
 			File f = myfailedscreenshot(testname);			
-			test.addScreenCaptureFromPath(f.getAbsolutePath());
+			thread.get().addScreenCaptureFromPath(f.getAbsolutePath());
 				
 			extent.flush();
 			
