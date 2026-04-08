@@ -33,6 +33,7 @@ public class baseclass
 	 dashboard d ;
 	 checkout c;
 	 loginpage l;
+	 String mybrowser;	
 	
 	@BeforeTest
 	public void launch() throws Exception
@@ -41,7 +42,21 @@ public class baseclass
 		FileInputStream fis = new FileInputStream("./data/config.properties");
 		Properties p = new Properties();
 		p.load(fis);
-		String mybrowser = p.getProperty("browser");
+						
+		if(System.getProperty("browser")==null)
+		{
+			mybrowser = p.getProperty("browser");
+		}
+		
+		else
+		{
+			mybrowser = System.getProperty("browser");
+		}
+		
+		//mybrowser = System.getProperty("browser")==null ?p.getProperty("browser") : System.getProperty("browser") ;
+		
+		
+		
 		if(mybrowser.equalsIgnoreCase("chrome"))
 		{
 			ChromeOptions op = new ChromeOptions();
