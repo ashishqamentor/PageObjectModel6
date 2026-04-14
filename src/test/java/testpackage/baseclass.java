@@ -55,8 +55,6 @@ public class baseclass
 		
 		//mybrowser = System.getProperty("browser")==null ?p.getProperty("browser") : System.getProperty("browser") ;
 		
-		
-		
 		if(mybrowser.equalsIgnoreCase("chrome"))
 		{
 			ChromeOptions op = new ChromeOptions();
