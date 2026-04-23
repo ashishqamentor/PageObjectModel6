@@ -8,8 +8,7 @@
 	</listeners>
 
 
-	<parameter name="url"
-		value="https://rahulshettyacademy.com/seleniumPractise/#/"></parameter>
+	<parameter name="url"	value="https://rahulshettyacademy.com/seleniumPractise/#/"></parameter>
 	<parameter name="promo" value="ashishQa1236"></parameter>
 	<parameter name="country" value="Brazil"></parameter>
 

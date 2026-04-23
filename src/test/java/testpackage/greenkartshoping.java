@@ -21,7 +21,9 @@ public class greenkartshoping extends baseclass
 	@Test
 	public void shopping(String myurl,String mypromo,String mycountry) throws Exception
 	{
-		w.get(myurl);		
+		w.get(myurl);	// given
+				
+		//when
 		FileInputStream fis = new FileInputStream("./data/login.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sh = wb.getSheetAt(1);		
@@ -35,9 +37,11 @@ public class greenkartshoping extends baseclass
 			
 			d.addtokart(vegname);		
 		}	
+		
 		Thread.sleep(2000);
 		c.checkoutjourney(mypromo,mycountry);
 
+		// And
 	}
 	
 

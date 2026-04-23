@@ -1,248 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-06T21:57:06 IST" name="Suite" finished-at="2026-04-06T21:57:31 IST" duration-ms="25488">
+  <suite started-at="2026-04-23T22:50:14 IST" name="Suite" finished-at="2026-04-23T22:50:44 IST" duration-ms="29608">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-06T21:57:06 IST" name="logintest" finished-at="2026-04-06T21:57:23 IST" duration-ms="16965">
-      <class name="testpackage.logintest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:06 IST" name="launch" finished-at="2026-04-06T21:57:08 IST" duration-ms="2839" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:11 IST" name="login" data-provider="mydata" finished-at="2026-04-06T21:57:12 IST" duration-ms="1384" status="PASS">
+    <test started-at="2026-04-23T22:50:14 IST" name="Test" finished-at="2026-04-23T22:50:44 IST" duration-ms="29608">
+      <class name="greenkartstep.geenkartrunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" started-at="2026-04-23T22:50:14 IST" name="setUpClass" finished-at="2026-04-23T22:50:15 IST" duration-ms="922" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+                <![CDATA[org.testng.TestRunner@5e0c4f21]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:13 IST" name="login" data-provider="mydata" finished-at="2026-04-06T21:57:13 IST" duration-ms="354" status="FAIL">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" started-at="2026-04-23T22:50:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-23T22:50:44 IST" duration-ms="28499" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[locked_out_user]]>
+                <![CDATA["To verify checkout journey."]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.saucedemo.com/inventory.html]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at testpackage.logintest.login(logintest.java:30)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:13 IST" name="login" data-provider="mydata" finished-at="2026-04-06T21:57:14 IST" duration-ms="609" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[problem_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.saucedemo.com/inventory.html]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at testpackage.logintest.login(logintest.java:30)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:14 IST" name="login" data-provider="mydata" finished-at="2026-04-06T21:57:19 IST" duration-ms="5527" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[performance_glitch_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+                <![CDATA["End to end Checkout journey."]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:20 IST" name="login" data-provider="mydata" finished-at="2026-04-06T21:57:20 IST" duration-ms="821" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[error_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.saucedemo.com/inventory.html]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" started-at="2026-04-23T22:50:44 IST" name="tearDownClass" finished-at="2026-04-23T22:50:44 IST" duration-ms="112" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:21 IST" name="login" data-provider="mydata" finished-at="2026-04-06T21:57:22 IST" duration-ms="1106" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[visual_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.saucedemo.com/inventory.html]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.logintest@1941a8ff]" started-at="2026-04-06T21:57:22 IST" name="terminate" finished-at="2026-04-06T21:57:23 IST" duration-ms="632" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- terminate -->
-      </class> <!-- testpackage.logintest -->
-    </test> <!-- logintest -->
-    <test started-at="2026-04-06T21:57:06 IST" name="greenkartshoping" finished-at="2026-04-06T21:57:31 IST" duration-ms="25488">
-      <class name="testpackage.greenkartshoping">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testpackage.greenkartshoping@4d9ac0b4]" started-at="2026-04-06T21:57:06 IST" name="launch" finished-at="2026-04-06T21:57:08 IST" duration-ms="2839" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="shopping(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testpackage.greenkartshoping@4d9ac0b4]" started-at="2026-04-06T21:57:09 IST" name="shopping" finished-at="2026-04-06T21:57:31 IST" duration-ms="22026" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://rahulshettyacademy.com/seleniumPractise/#/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ashishQa1236]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Brazil]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shopping -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.greenkartshoping@4d9ac0b4]" started-at="2026-04-06T21:57:31 IST" name="terminate" finished-at="2026-04-06T21:57:31 IST" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- terminate -->
-      </class> <!-- testpackage.greenkartshoping -->
-    </test> <!-- greenkartshoping -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- greenkartstep.geenkartrunner -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

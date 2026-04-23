@@ -29,11 +29,11 @@ import pages.loginpage;
 public class baseclass 
 {
 
-	public WebDriver w;  // global/ instance varibale
-	 dashboard d ;
-	 checkout c;
-	 loginpage l;
-	 String mybrowser;	
+	 public WebDriver w;  // global/ instance varibale
+	 public dashboard d ;
+	 public checkout c;
+	 public loginpage l;
+	 public String mybrowser;	
 	
 	@BeforeTest
 	public void launch() throws Exception
