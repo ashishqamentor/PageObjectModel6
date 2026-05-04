@@ -73,7 +73,6 @@
 	</dependencies>
 
 
-
 	<profiles>
 
 		<profile>
@@ -135,8 +134,8 @@
 				</pluginManagement>
 			</build>
 		</profile>
-		
-		
+
+
 		<profile>
 			<id>greenkartcucumber</id>
 			<build>
@@ -157,6 +156,25 @@
 			</build>
 		</profile>
 
+		<profile>
+			<id>logincucumber</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.5</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>logincucumber.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
 
 
 	</profiles>

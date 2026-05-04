@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 	features = "features/greenkart.feature",
 	glue = "greenkartstep",
 	plugin = {	"pretty" , "html:report/greenkart.html",
-				"json:report/greenkart.json "
+							"json:report/greenkart.json "
 			},
 	monochrome = true
 )

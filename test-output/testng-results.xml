@@ -1,47 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-23T22:50:14 IST" name="Suite" finished-at="2026-04-23T22:50:44 IST" duration-ms="29608">
+  <suite started-at="2026-04-27T22:47:12 IST" name="Suite" finished-at="2026-04-27T22:47:36 IST" duration-ms="23945">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-23T22:50:14 IST" name="Test" finished-at="2026-04-23T22:50:44 IST" duration-ms="29608">
-      <class name="greenkartstep.geenkartrunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" started-at="2026-04-23T22:50:14 IST" name="setUpClass" finished-at="2026-04-23T22:50:15 IST" duration-ms="922" status="PASS">
+    <test started-at="2026-04-27T22:47:12 IST" name="Test" finished-at="2026-04-27T22:47:36 IST" duration-ms="23945">
+      <class name="loginstep.loginrunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:12 IST" name="setUpClass" finished-at="2026-04-27T22:47:13 IST" duration-ms="804" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5e0c4f21]]>
+                <![CDATA[org.testng.TestRunner@303c55fa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" started-at="2026-04-23T22:50:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-23T22:50:44 IST" duration-ms="28499" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-27T22:47:17 IST" duration-ms="4322" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify checkout journey."]]>
+                <![CDATA["To verify login."]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["End to end Checkout journey."]]>
+                <![CDATA["to verify login functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:greenkartstep.geenkartrunner@5965d37]" started-at="2026-04-23T22:50:44 IST" name="tearDownClass" finished-at="2026-04-23T22:50:44 IST" duration-ms="112" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-27T22:47:20 IST" duration-ms="2521" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify login."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to verify login functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at loginstep.loginstepdefination.verify(loginstepdefination.java:45)
+at ✽.inventory page should display with url "https://www.saucedemo.com/inventory.html"(file:///C:/Users/koush/eclipse-workspace/PageObjectModel6/features/login.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-27T22:47:22 IST" duration-ms="2538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify login."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to verify login functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-27T22:47:30 IST" duration-ms="7617" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify login."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to verify login functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-27T22:47:33 IST" duration-ms="3086" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify login."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to verify login functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-27T22:47:36 IST" duration-ms="2860" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify login."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to verify login functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:loginstep.loginrunner@5965d37]" started-at="2026-04-27T22:47:36 IST" name="tearDownClass" finished-at="2026-04-27T22:47:36 IST" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- greenkartstep.geenkartrunner -->
+      </class> <!-- loginstep.loginrunner -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
